@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  padding: 1.25rem;
+}
+
+.container {
+  margin-top: 5px;
+  padding: 1.2rem;
+  justify-content: center;
+  margin: 0 auto;
+  max-height: 100vh;
+  height: 38rem;
+  width: 22rem;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 0.7rem;
+  padding: 5px;
+}
+
+.image-overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.image-overlay img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-overlay::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0);
+  opacity: 0;
+  border-radius: 0.7rem;
+  transition: background-color 0s, opacity 0.3s ease-out;
+  cursor: pointer;
+}
+
+.image-overlay:hover::before {
+  background-color: hsla(178, 100%, 50%, 0.7);
+  border-radius: 0.7rem;
+  opacity: 1;
+}
+
+.eye-view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-out;
+}
+
+.image-overlay:hover .eye-view {
+  visibility: visible;
+  opacity: 1;
+}
+
+h3 {
+  color: hsl(0, 0%, 100%);
+  margin-top: 0.625rem;
+  margin-bottom: 0.938rem;
+}
+h3:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+p {
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+}
+
+.description {
+  margin-bottom: 0.625rem;
+}
+
+.icons {
+  display: flex;
+  gap: 5rem;
+  margin-top: 1rem;
+}
+
+.eth {
+  display: flex;
+  align-items: center;
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+}
+
+.time-left {
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  margin-top: 1.8rem;
+  border: none;
+  height: 1px;
+  background-color: hsla(215, 52%, 70%, 0.315);
+}
+
+.creation {
+  display: flex;
+  margin-top: 1.4rem;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.author {
+  font-size: 16px;
+  margin-left: 1rem;
+  align-self: center;
+}
+
+.author a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.author a:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
